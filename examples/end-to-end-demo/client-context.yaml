@@ -1,0 +1,28 @@
+client_id: atelier-horizon-demo
+status: fictional-demo
+business:
+  category: online-training
+  offer: weekly-team-meeting-system
+  audience: managers-of-small-teams
+  business_goal: validate-demand
+known_facts:
+  - "The case is fictional and exists only for system testing."
+  - "The offer teaches a repeatable weekly meeting structure."
+constraints:
+  - "No real customer data may be inferred from this example."
+  - "No simulated metric may be presented as market evidence."
+unknowns:
+  - real-price-sensitivity
+  - real-objection-frequency
+  - channel-economics
+  - actual-conversion-rate
+assumptions:
+  - id: H-A1
+    statement: "Managers may value shorter meetings more than better meeting documentation."
+    status: hypothesis
+  - id: H-A2
+    statement: "Fear of wasting team time may be a stronger tension than lack of process."
+    status: hypothesis
+evidence:
+  verified: []
+  simulated: []
