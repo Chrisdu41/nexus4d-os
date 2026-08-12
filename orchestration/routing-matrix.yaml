@@ -1,0 +1,32 @@
+version: "0.3"
+missions:
+  launch-offer:
+    sequence: [research, voc, positioning, neuromarketing, creative-strategist, copywriter, cro, media-buyer, memory]
+  meta-ads:
+    sequence: [research, voc, positioning, creative-strategist, copywriter, video-director, ai-director, media-buyer, performance, memory]
+  linkedin:
+    sequence: [voc, positioning, neuromarketing, creative-strategist, copywriter, performance, memory]
+  video:
+    sequence: [positioning, neuromarketing, creative-strategist, copywriter, video-director, ai-director, performance, memory]
+  book:
+    sequence: [research, voc, positioning, creative-strategist, copywriter, memory]
+  training:
+    sequence: [research, voc, positioning, copywriter, video-director, memory]
+  website:
+    sequence: [research, voc, positioning, copywriter, cro, neuromarketing, memory]
+  newsletter:
+    sequence: [voc, positioning, creative-strategist, copywriter, performance, memory]
+  podcast:
+    sequence: [research, positioning, creative-strategist, copywriter, video-director, performance, memory]
+  conference:
+    sequence: [research, positioning, neuromarketing, creative-strategist, copywriter, video-director, memory]
+  marketing-audit:
+    sequence: [research, voc, positioning, neuromarketing, cro, performance, memory]
+  optimization:
+    sequence: [performance, research, voc, positioning, creative-strategist, cro, media-buyer, memory]
+
+rules:
+  - "Do not call a specialist when its required inputs are unavailable unless the mission explicitly allows hypothesis mode."
+  - "Memory is the only specialist allowed to convert a qualified learning candidate into a persistent memory entry."
+  - "Performance analysis requires observed metrics; without metrics it may only design a measurement plan."
+  - "Research and VOC outputs must retain provenance when source data exists."
