@@ -1,0 +1,40 @@
+{
+  "mission_id": "pilot-01-meta-nexus4d",
+  "client_id": "ctprod",
+  "mission_type": "meta-ads",
+  "status": "intake",
+  "objective": "Generate qualified conversations or leads for a NEXUS 4D offer while testing the NEXUS 4D OS orchestration workflow.",
+  "facts": [
+    "NEXUS 4D combines Video, Marketing, AI and Neuromarketing.",
+    "CT PROD works in video marketing and AI."
+  ],
+  "inferences": [
+    "Lead generation is likely safer than direct-response purchase until the offer and pricing are confirmed."
+  ],
+  "hypotheses": [
+    "A low-friction NEXUS 4D diagnostic can work as the first conversion action."
+  ],
+  "unknowns": [
+    "exact_offer",
+    "price",
+    "landing_page",
+    "proof_assets",
+    "media_budget",
+    "geography",
+    "lead_capacity",
+    "primary_business_kpi"
+  ],
+  "required_specialists": [
+    "research",
+    "voc",
+    "positioning",
+    "neuromarketing",
+    "creative-strategist",
+    "copywriter",
+    "video-director",
+    "media-buyer",
+    "cro",
+    "memory"
+  ],
+  "next_action": "Run the Cowork pilot and force explicit separation of knowns and unknowns before creative production."
+}
