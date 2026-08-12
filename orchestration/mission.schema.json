@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NEXUS 4D Mission",
+  "type": "object",
+  "required": ["mission_id", "mission_type", "objective", "status", "context", "steps"],
+  "properties": {
+    "mission_id": {"type": "string"},
+    "client_id": {"type": ["string", "null"]},
+    "mission_type": {"type": "string"},
+    "objective": {"type": "string"},
+    "status": {"enum": ["INTAKE", "CONTEXT", "PLAN", "EXECUTE", "QA", "DELIVER", "LEARN", "DONE", "BLOCKED_INPUT", "BLOCKED_EVIDENCE", "FAILED_QA", "CANCELLED"]},
+    "context": {
+      "type": "object",
+      "required": ["facts", "inferences", "hypotheses", "unknowns", "constraints"],
+      "properties": {
+        "facts": {"type": "array", "items": {"type": "string"}},
+        "inferences": {"type": "array", "items": {"type": "string"}},
+        "hypotheses": {"type": "array", "items": {"type": "string"}},
+        "unknowns": {"type": "array", "items": {"type": "string"}},
+        "constraints": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "specialist", "status"],
+        "properties": {
+          "id": {"type": "string"},
+          "specialist": {"type": "string"},
+          "status": {"enum": ["PENDING", "READY", "RUNNING", "BLOCKED", "DONE", "FAILED"]},
+          "depends_on": {"type": "array", "items": {"type": "string"}},
+          "inputs": {"type": "object"},
+          "outputs": {"type": "object"},
+          "qa_passed": {"type": ["boolean", "null"]}
+        }
+      }
+    },
+    "deliverables": {"type": "array", "items": {"type": "string"}},
+    "kpis": {"type": "array", "items": {"type": "string"}},
+    "learning_candidate": {"type": ["object", "null"]}
+  }
+}
