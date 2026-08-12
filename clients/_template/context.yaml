@@ -1,0 +1,16 @@
+client_id: example-client
+identity:
+  name: Example Client
+  sector: unknown
+  language: fr
+business:
+  model: unknown
+  offers: []
+audiences: []
+positioning: {}
+evidence: []
+constraints: {}
+active_goals: []
+known_learnings: []
+open_questions: []
+updated_at: null

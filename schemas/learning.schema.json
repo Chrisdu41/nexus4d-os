@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NEXUS 4D Learning",
+  "type": "object",
+  "required": ["learning_id", "client_id", "observation", "interpretation", "confidence", "status", "evidence_refs"],
+  "properties": {
+    "learning_id": {"type": "string"},
+    "client_id": {"type": "string"},
+    "mission_id": {"type": "string"},
+    "experiment_id": {"type": "string"},
+    "observation": {"type": "string"},
+    "interpretation": {"type": "string"},
+    "confidence": {"enum": ["low", "medium", "high"]},
+    "status": {"enum": ["proposed", "active", "challenged", "superseded", "invalidated", "archived"]},
+    "scope": {"type": "string"},
+    "evidence_refs": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "alternative_explanations": {"type": "array", "items": {"type": "string"}},
+    "decision_impact": {"type": "string"},
+    "created_at": {"type": "string"},
+    "review_at": {"type": "string"}
+  }
+}
