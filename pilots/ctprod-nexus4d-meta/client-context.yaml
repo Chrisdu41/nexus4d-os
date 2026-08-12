@@ -1,0 +1,44 @@
+client_id: ctprod
+pilot_id: pilot-01-meta-nexus4d
+status: draft
+
+identity:
+  brand: CT PROD
+  method: NEXUS 4D
+
+positioning:
+  facts:
+    - "NEXUS 4D combine Vidéo, Marketing, IA et Neuromarketing."
+    - "CT PROD intervient sur le marketing vidéo et l'IA."
+  inferences:
+    - "La valeur peut venir de l'intégration des disciplines plutôt que de la production de contenu seule."
+  hypotheses:
+    - "Le diagnostic NEXUS 4D peut servir de CTA d'entrée."
+
+audiences:
+  known:
+    - entrepreneurs
+    - TPE/PME
+  to_validate:
+    - responsables marketing
+    - consultants
+    - coaches
+
+offer:
+  name: "NEXUS 4D — offre à confirmer"
+  price: unknown
+  conversion_action: "lead ou rendez-vous qualifié"
+  landing_page: unknown
+
+proof:
+  verified: []
+  available_but_not_validated: []
+
+constraints:
+  media_budget: unknown
+  geography: unknown
+  capacity: unknown
+
+privacy:
+  contains_sensitive_data: false
+  note: "Ne pas ajouter de données sensibles dans ce fichier public."
