@@ -1,0 +1,54 @@
+version: "0.3"
+specialists:
+  orchestrator:
+    role: coordination
+    can_write_memory: false
+    outputs: [plan, routing, consolidated_delivery]
+  research:
+    role: intelligence
+    requires: [objective]
+    outputs: [observations, sources, market_map, competitor_map]
+  voc:
+    role: intelligence
+    requires: [objective, audience]
+    outputs: [verbatims, tensions, objections, language_patterns]
+  positioning:
+    role: strategy
+    requires: [research_or_context]
+    outputs: [icp, positioning, promise, differentiation, reason_to_believe]
+  neuromarketing:
+    role: strategy
+    outputs: [attention_analysis, cognitive_friction, emotional_levers, decision_risks]
+  creative-strategist:
+    role: creation
+    requires: [positioning]
+    outputs: [angles, concepts, hypotheses]
+  copywriter:
+    role: production
+    requires: [concept]
+    outputs: [copy, hooks, headlines, cta]
+  video-director:
+    role: production
+    requires: [concept]
+    outputs: [storyboard, shot_list, visual_hook, edit_direction]
+  ai-director:
+    role: production
+    requires: [creative_direction]
+    outputs: [image_prompts, video_prompts, generation_workflow]
+  media-buyer:
+    role: experiment
+    requires: [creative_hypotheses, objective]
+    outputs: [test_plan, kpis, budget_logic, kill_scale_rules]
+  cro:
+    role: conversion
+    requires: [offer, page_or_funnel]
+    outputs: [frictions, recommendations, experiments]
+  performance:
+    role: learning
+    requires: [metrics]
+    outputs: [observations, interpretations, next_tests]
+  memory:
+    role: learning
+    requires: [qualified_learning]
+    outputs: [memory_entry]
+    can_write_memory: true
