@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NEXUS 4D Mission Cockpit",
+  "type": "object",
+  "required": ["mission_id", "client_id", "title", "objective", "state", "next_action"],
+  "properties": {
+    "mission_id": {"type": "string"},
+    "client_id": {"type": "string"},
+    "title": {"type": "string"},
+    "objective": {"type": "string"},
+    "state": {"enum": ["INTAKE","CONTEXT_READY","RESEARCHING","STRATEGY_READY","PRODUCING","QUALITY_REVIEW","READY_TO_TEST","MEASURING","LEARNING","COMPLETE","BLOCKED"]},
+    "specialists": {"type": "array", "items": {"type": "string"}},
+    "known_facts": {"type": "array"},
+    "unknowns": {"type": "array"},
+    "hypotheses": {"type": "array"},
+    "deliverables": {"type": "array"},
+    "experiments": {"type": "array"},
+    "quality_score": {"type": ["integer","null"], "minimum": 0, "maximum": 100},
+    "hard_stop": {"type": "boolean", "default": false},
+    "risks": {"type": "array"},
+    "next_action": {"type": "string"},
+    "memory_updates": {"type": "array"}
+  },
+  "additionalProperties": false
+}
