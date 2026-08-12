@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nexus4d.local/schemas/client-context.schema.json",
+  "title": "NEXUS 4D Client Context",
+  "type": "object",
+  "required": ["client_id", "identity", "business", "active_goals"],
+  "properties": {
+    "client_id": {"type": "string", "minLength": 1},
+    "identity": {"type": "object"},
+    "business": {"type": "object"},
+    "audiences": {"type": "array", "items": {"type": "object"}},
+    "positioning": {"type": "object"},
+    "evidence": {"type": "array", "items": {"type": "object"}},
+    "constraints": {"type": "object"},
+    "active_goals": {"type": "array", "items": {"type": "object"}},
+    "known_learnings": {"type": "array", "items": {"type": "string"}},
+    "open_questions": {"type": "array", "items": {"type": "string"}},
+    "updated_at": {"type": "string"}
+  },
+  "additionalProperties": true
+}
