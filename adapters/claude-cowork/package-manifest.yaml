@@ -1,0 +1,24 @@
+package:
+  id: nexus4d-os-orchestrator
+  version: 0.4.0
+  format: cowork-skill
+  entrypoint: SKILL.md
+  source_of_truth:
+    core: ../../core
+    missions: ../../missions
+    specialists: ../../specialists
+    orchestration: ../../orchestration
+    memory: ../../memory
+  include:
+    - SKILL.md
+    - references/
+  exclude:
+    - client-private-data
+    - raw-campaign-exports
+    - secrets
+  build_rules:
+    - fail_if_entrypoint_missing
+    - fail_if_frontmatter_missing
+    - fail_if_absolute_local_paths
+    - preserve_utf8
+    - package_one_top_level_directory
